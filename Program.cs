@@ -22,6 +22,7 @@ namespace L22_localMaxima
                 mainArray[i] = random.Next(minNumber, maxNumber + 1);
                 Console.Write(mainArray[i] + " ");
             }
+
             Console.WriteLine();
             Console.WriteLine("\nЛокальные максимумы:");
 
@@ -43,6 +44,7 @@ namespace L22_localMaxima
                         Console.Write(mainArray[i] + " ");
                 }
             }
+
             Console.WriteLine();
         }
     }
