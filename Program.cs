@@ -43,7 +43,6 @@ namespace L22_localMaxima
                         Console.Write(mainArray[i] + " ");
                 }
             }
-
             Console.WriteLine();
         }
     }
