@@ -14,6 +14,7 @@ namespace L22_localMaxima
             int[] mainArray = new int[30];
             int minNumber = 0;
             int maxNumber = 100;
+            int lastElement = mainArray.Length - 1;
 
             Console.WriteLine("Массив:");
 
@@ -26,24 +27,17 @@ namespace L22_localMaxima
             Console.WriteLine();
             Console.WriteLine("\nЛокальные максимумы:");
 
-            for (int i = 0; i < mainArray.Length; i++)
+            if (mainArray[0] > mainArray[1])
+                Console.Write(mainArray[0] + " ");
+
+            for (int i = 1; i < mainArray.Length - 1; i++)
             {
-                if (i > 0 && i < mainArray.Length - 1)
-                {
-                    if (mainArray[i] > mainArray[i - 1] && mainArray[i] > mainArray[i + 1])
-                        Console.Write(mainArray[i] + " ");
-                }
-                else if (i == 0)
-                {
-                    if (mainArray[i] > mainArray[i + 1])
-                        Console.Write(mainArray[i] + " ");
-                }
-                else if (i == mainArray.Length - 1)
-                {
-                    if (mainArray[i] > mainArray[i - 1])
-                        Console.Write(mainArray[i] + " ");
-                }
+                if (mainArray[i] > mainArray[i - 1] && mainArray[i] > mainArray[i + 1])
+                    Console.Write(mainArray[i] + " ");
             }
+
+            if (mainArray[lastElement] > mainArray[lastElement - 1])
+                Console.Write(mainArray[lastElement] + " ");
 
             Console.WriteLine();
         }
